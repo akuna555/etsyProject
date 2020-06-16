@@ -13,10 +13,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-/**
- *
- * @author Vitali
- */
+
 public class FileUtil {
     public static LoginVO getLoginData(){
         LoginVO login = null;
@@ -56,9 +53,15 @@ public class FileUtil {
         c= (Cell) r.getCell(11);
         String newPassword = c.getStringCellValue();
         
+        c = (Cell) r.getCell(12);
+        String errorMesg5 = c.getStringCellValue();
+        
+        c= (Cell) r.getCell(13);
+        String errorMesg6 = c.getStringCellValue();
+        
         
         login = new LoginVO(username, password,currency,region,regionVerf,newPass3,newPass3Invalid,errorMesg3,
-                currentPassInvalid, errorMesg4,newPassword);
+                currentPassInvalid, errorMesg4,newPassword,errorMesg5,errorMesg6);
         
         System.out.println(login);
         inputStream.close();

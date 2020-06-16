@@ -1,14 +1,7 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package com.itexpert.etsyproject1;
 
-/**
- *
- * @author Vitali
- */
+
 public class LoginVO {
     private String userName;
     private String password;
@@ -21,9 +14,12 @@ public class LoginVO {
     private String currentPassInvalid;
     private String errorMesg4;
     private String newPassword;
+    private String errorMesg5;
+    private String errorMesg6;
     
     public LoginVO(String userName, String password, String currency, String region, String regionVerf, String newPass3,
-            String newPass3Invalid, String errorMesg3,String currentPassInvalid,String errorMesg4,String newPassword) {
+            String newPass3Invalid, String errorMesg3,String currentPassInvalid,String errorMesg4,String newPassword,String errorMesg5,
+            String errorMesg6) {
         this.userName = userName;
         this.password = password;
         this.currency = currency;
@@ -35,17 +31,41 @@ public class LoginVO {
         this.currentPassInvalid = currentPassInvalid;
         this.errorMesg4 =errorMesg4;
         this.newPassword = newPassword;
+        this.errorMesg5 = errorMesg5;
+        this.errorMesg6 = errorMesg6;
     }
+
     @Override
     public String toString() {
         return "LoginVO{" + "userName=" + userName + ", password=" + password + ","
-                + " currency=" + currency + ", region=" + region + ", "
-                + "regionVerf=" + regionVerf + ", newPass3=" + newPass3 + ","
-                + " newPass3Invalid=" + newPass3Invalid + ", errorMesg3=" + errorMesg3 + ", "
-                + "currentPassInvalid=" + currentPassInvalid + ", errorMesg4=" + errorMesg4 + ", "
-                + "newPassword=" + newPassword + '}';
+                + " currency=" + currency + ", region=" + region + ", re"
+                + "gionVerf=" + regionVerf + ", newPass3=" + newPass3 + ", "
+                + "newPass3Invalid=" + newPass3Invalid + ", "
+                + "errorMesg3=" + errorMesg3 + ", currentPassInvalid=" + currentPassInvalid + ", "
+                + "errorMesg4=" + errorMesg4 + ", newPassword=" + newPassword + ","
+                + " errorMesg5=" + errorMesg5 + ", errorMesg6=" + errorMesg6 + '}';
     }
 
+    
+
+    public String getErrorMesg6() {
+        return errorMesg6;
+    }
+
+    public void setErrorMesg6(String errorMesg6) {
+        this.errorMesg6 = errorMesg6;
+    }
+    
+    
+
+    public String getErrorMesg5() {
+        return errorMesg5;
+    }
+
+    public void setErrorMesg5(String errorMesg5) {
+        this.errorMesg5 = errorMesg5;
+    }
+    
     
 
     public String getNewPassword() {
